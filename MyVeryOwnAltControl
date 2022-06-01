@@ -65,22 +65,6 @@ function Abbreviate(value)
 		if div > #abbreviations  then
 			print("div", div, "greater than suff", #abbreviations )
 			str = inStr
-		else
-			if rem == 1 then
-				str = tostring(tonumber(str) / 100)
-			elseif rem == 2 then
-				str = tostring(tonumber(str) / 10)
-			end
-			local suff = abbreviations [div]
-			if suff == "O" then
-				str = str .. " " .. suff
-			else
-				str = str .. suff
-			end
-		end
-		return str
-	end
-end
 
 repeat wait() until game.Players.LocalPlayer.Character
 
